@@ -1,0 +1,42 @@
+Delay Analysis:
+Top 3 with highest probability:
+WN	0.0706
+EA	0.0508
+AS	0.0319
+
+Top 3 with lowest probability:
+B6	0.0017
+9E	0.0020
+XE	0.0025
+
+
+Taxi Analysis:
+Longest Taxi in time
+
+14.88888888888889	MTH
+95.26591760299625	LNY
+183.0	CKB
+
+Shortest Taxi in time 
+
+2.0	BFF
+2.7362465501379947	BRW
+2.971264367816092	ANI
+
+
+Longest Taxi out time
+
+25.1774897680764	BQN
+26.763754045307444	SOP
+34.95380774032459	ACK
+
+Shortest Taxi out time 
+
+4.725563909774436	MKK
+6.402298850574713	KSM
+6.717532467532467	VIS
+
+
+Cancel Code Analysis:
+Highest Cancel code used:
+NA 83844440

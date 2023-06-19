@@ -1,0 +1,50 @@
+   ozie Installation and configuration: 
+  |-------------------------------------|
+
+$ wget http://archive.apache.org/dist/oozie/4.1.0/oozie-4.1.0.tar.gz
+$ tar zxvf oozie-4.1.0.tar.gz
+$ cd oozie-4.1.0
+
+
+
+     Update core-site.xml of hadoop
+ |-------------------------------------|
+
+<property>
+<name>fs.default.name</name>
+<value>hdfs://Master-Hostname:9000</value>
+</property>
+<property>
+<name>hadoop.tmp.dir</name>
+<value>/home/impadmin/hadoop /tmp</value>
+</property>
+
+
+         Starting oozie
+ |-------------------------------------|
+$ bin/oozie-start.sh
+
+
+       Hadoop commands:
+ |-------------------------------------|
+
+Starting Hadoop:
+
+$ cd hadoop
+$ sbin/start-all.sh
+
+
+Copy the Lib, job.properties, workflow.xml files to MROozie folder in HDFS
+|-------------------------------------------------------------------------|
+
+$ hdfs dfs –put /oozie/ /MROozie
+$ load data into HDFS
+$ hdfs dfs –put /data /data
+
+
+       Oozie workflow execution:
+ |-------------------------------------|
+
+$ cd oozie
+$ oozie job -oozie hdfs://localhost:11000/ -config job.properties –run
+$ oozie job -oozie http://localhost:11000/ -info
